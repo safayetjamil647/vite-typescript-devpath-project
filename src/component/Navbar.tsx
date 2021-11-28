@@ -6,7 +6,7 @@ function Navbar() {
 
     const [isActive, setActive] = useState("");
     const[isHover,setHover]=useState("");
-    const toggleAccordion = () => {
+    const toggleMenu = () => {
         setActive(isActive === "" ? "active" : "");
         setHover(isHover=== ""? "block":"")
       }
@@ -18,11 +18,11 @@ function Navbar() {
       </div>
       <nav>
     <div className="nav-mobile">
-      <a id="nav-toggle" onClick={toggleAccordion} className={`${isActive}`} ><span></span></a>
+      <a id="nav-toggle" onClick={toggleMenu} className={`${isActive}`} ><span></span></a>
     </div>
     <ul className={`nav-list ${isHover}` }>
       <li><Link to="/">Home</Link></li>
-      <li><a href="#!">Generate</a></li>
+      <li><a href="/generate">Generate</a></li>
       <li>
         <a href="#!">Services</a>
         <ul className="nav-dropdown">
